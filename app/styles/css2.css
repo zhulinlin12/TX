@@ -175,6 +175,7 @@
     color: #006CFF;
   }
   .had .ul li .km {
+    display: none;
     padding-bottom: 10px;
   }
   .had .ul li .km .ma-s {

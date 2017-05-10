@@ -1,7 +1,31 @@
 // JavaScript Document
 
 window.onload=function(){
-	
+	var xe=document.getElementById("kehu1");
+	 var po=xe.getElementsByTagName('span');
+	 for(var i=0;i<po.length;i++){
+	 	po[i].index=i;
+	 	po[i].onclick=function(){
+	 		for(var i=0;i<po.length;i++){
+	 			po[i].className=''
+	 		}
+	 		this.className='ahover'
+	 	}
+	 	
+	 }
+    var xi=document.getElementById("kehu");
+    var li=xi.getElementsByTagName('li');
+    for(var i=0;i<li.length;i++){
+    	li[i].index=i;
+    	li[i].onmouseover=function(){
+    		this.getElementsByTagName('b')[0].className='hover';
+    		this.getElementsByTagName('div')[0].style.display='block';
+    	}
+    	li[i].onmouseout=function(){
+    		this.getElementsByTagName('b')[0].className='';
+    		this.getElementsByTagName('div')[0].style.display='none';
+    	}
+    }
     //搜索框
 	var Ss=document.getElementById('ssk');
 	var Sw=document.getElementById('sl');
@@ -124,7 +148,6 @@ fixed.children[8].onclick=function(){
 	onscroll=function(){
 
 _top=document.documentElement.scrollTop||document.body.scrollTop;
-console.log(_top)
 if(_top>100){
 fixed.style.position='fixed';
 fixed.style.top='30px';
